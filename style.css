@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Freight-big-pro, serif;
+    scroll-behavior: smooth; 
+}
+
+html,
+body {
+    height: 100%;
+    width: 100vw;
+    scroll-behavior: smooth;
+}
+
+#loader{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(245, 228, 27);
+    position: fixed;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: none;
+}
+
+#loader h1 {
+    z-index: 9;
+    letter-spacing: -.03em;
+    font-size: 6vw;
+    font-weight: 50;
+    line-height: 6vw;
+    position: relative;
+    letter-spacing: -3px;
+    font-family: Freight-big-pro, serif;
+}
+
+#loader video{
+    z-index: 6;
+    height: 100;
+    width: 100%;
+    position: absolute;
+}
+
+#yellow1{
+    z-index: 8;
+    height: 100vh;
+    width: 100vw;
+    background-color:rgb(245, 228, 27);
+    position:absolute;
+}
+
+#nav{
+    position:fixed;
+    width: 100%;
+    padding: 35px 60px;
+    z-index: 6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#page1 { 
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(245, 228, 27);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#option{
+    width: 30vw;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+#option a{
+    color:#000;
+    text-decoration: none;
+    font-weight: 200;
+    font-family: neue-haas-grotesk-display,sans-serif;
+}
+
+#cross{
+    font-size: 30px;
+    font-weight: 400;
+    border: none;
+    background-color:rgba(243, 242, 241, 0) ;
+    
+}
+
+#option a:hover{
+    border-bottom: 1px solid black;
+}
+
+#social{
+    margin-top: 20px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 50px 30px;
+}
+
+#social a{
+    color: black;
+    text-decoration: none;
+    font-family: neue-haas-grotesk-display,sans-serif;
+}
+
+.social:hover{
+    border-bottom: 1px solid black;
+}
+
+#arow{
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+#page1 h1 {
+    letter-spacing: -.03em;
+    font-size: 6vw;
+    font-weight: 50;
+    line-height: 6vw;
+    letter-spacing: -3px;
+    font-family: Freight-big-pro, serif;
+    margin-top: 180px;
+    padding-top: 80px;
+}
+
+
+#page2 {
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    background-size: cover;
+    background-position: cent er;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.elem{
+    position: relative;
+    width: 100%;
+    cursor: pointer ;
+}
+
+.elem .blur{
+    position: absolute;
+    width: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    background: linear-gradient(to right, #f5e31be7, #F5E41B, #f5e31bef);
+    box-shadow: 10px 0 20px 20px #F5E41B, -10px 0 20px 20px #F5E41B;
+    height: 100%;
+    z-index: 8;
+}
+
+.elem h2{
+    font-size: 6.9vw;
+    text-transform: uppercase;
+    font-weight: 100;
+    position: relative;
+    z-index: 9;
+    line-height: 6vw;
+    cursor: pointer;
+}
+
+.elem h2:hover{
+    font-style: italic;
+}
+
+.elem .moving{
+    background-color: rgb(245, 228, 27);
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -40%) scaleY(0);
+    transition: all ease 0.3s;
+    padding: 8px 0;
+}
+
+.elem:hover .moving{
+    transform: translate(0, -40%) scaleY(1);
+}
+
+.elem .moving-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: moving;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+}
+.elem .moving-in h5{
+    color: black;
+    display: inline-block;
+    font-size: 19px;
+    font-family: gilroy;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-right: 35px;
+    opacity: 0;
+    transition: all ease 0.3s;
+    transition-delay: 0.2s;
+}
+
+.elem:hover .moving-in h5{
+    opacity: 1;
+}
+
+
+
+@keyframes moving {
+    from{
+        transform: translatex(0);
+    }
+    to{
+        transform: translatex(-100%);
+    }
+    
+}
+
+
+
+
+#page3 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #fff;
+}
+
+.image-container{
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.image-div{
+    /* height: 70vh; */
+    width:28vw;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 20px;
+}
+
+.image-div img{
+    height: 100%;
+    transition: all ease 0.5s;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #0000000d;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.5s;
+    z-index: 9;
+}
+
+.overlay p{
+    color: white;
+    font-size: 3vw;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 6vh;
+    opacity: 0;
+    transition: all ease 0.5s;
+}
+
+.image-div:hover .overlay{
+    background-color: #000;
+}
+
+.image-div:hover .overlay p{
+    opacity: 1;
+}
+
+.image-div:hover img{
+    scale: 1.1;
+}
+
+#to-top a{
+    color: black;
+    text-decoration: none;
+    font-size: 3vw;
+}
+
+#to-top{
+    font-size: 2vw;
+    text-align: center;
+    font-weight: 100;
+}
+
+#footer{
+    height: 20vh;
+    width: 100vw;
+    background-color: #000;
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    font-size: 1.3vw;
+}
+
+#footer a{
+    color: white;
+    text-decoration: none;
+
+}
+
+#footer a:hover{
+    border-bottom: 1px solid white;
+}
+
+#news{
+    margin-left: 50vw;
+}
