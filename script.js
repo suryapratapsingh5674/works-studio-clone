@@ -42,9 +42,6 @@ elems.forEach(function(ele){
     })
 })
 
- elems.addEventListener("mouseleave", function(){
-        page2.style.color = "black";
-    });
 
 document.getElementById('up').addEventListener('click', function(event) {
     event.preventDefault(); 
