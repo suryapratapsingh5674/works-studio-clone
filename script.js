@@ -39,11 +39,12 @@ elems.forEach(function(ele){
     ele.addEventListener("mouseenter", function(){
         var bgimg = ele.getAttribute("data-img");
         page2.style.backgroundImage = `url(${bgimg})`
-    });
-    ele.addEventListener("mouseleave", function(){
+    })
+})
+
+ elems.addEventListener("mouseleave", function(){
         page2.style.color = "black";
     });
-})
 
 document.getElementById('up').addEventListener('click', function(event) {
     event.preventDefault(); 
